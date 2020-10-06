@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('hback.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+img.avatar {
+  
+  border-radius: 50%;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+h1{
+color:rgb(230, 43, 43);
+}
+h2{
+color:rgb(139, 0, 120);
+}
+h4{
+color:rgb(105, 11, 15);
+}
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <img  src="img_avatar2.png" height="60" width="60" class="avatar" >
+  </div>
+  <div class="middle">
+    <h1>HOTEL RESERVATION SYSTEM</h1>
+    <hr>
+    <a href="login.php"><h2>Book a Room</h2></a>
+  </div>
+  <div class="bottomleft">
+    <marquee color:><h4>Book and get Best Rooms..</h4></marquee>
+  </div>
+</div>
+
+</body>
+</html>
