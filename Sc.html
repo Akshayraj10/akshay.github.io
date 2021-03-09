@@ -1,22 +1,68 @@
 <!DOCTYPE html>
-
-    
-<html lang="en">
+<html lang="en"><!-- Basic -->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="Raj Interior Decorators" />
-<meta name="description" content="Raj Interior Decorators-Template" />
-<meta name="author" content="wintechindia.com" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="HandheldFriendly" content="true">
+	<link rel="icon" href="images/sclogo3.png" type="image">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+     <!-- Site Metas -->
+    <title>SC Creations</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
 
-<title>SC Creative</title>
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/sclogo3.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images1/apple-touch-icon.png">
 
-<!-- Favicon -->
-<link rel="shortcut icon" href="images/sclogo3.png" style="max-width: 100%; height: auto;" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css1/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="css1/style2.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css1/responsive.css">
+    <!-- Custom CSS -->
+	<link rel="stylesheet" href="css1/custom.css">
+	<!--Text animation -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script>// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml1 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml1 .letter',
+    scale: [0.3,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 600,
+    delay: (el, i) => 70 * (i+1)
+  }).add({
+    targets: '.ml1 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700,
+    offset: '-=875',
+    delay: (el, i, l) => 80 * (l - i)
+  }).add({
+    targets: '.ml1',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });</script>
 
 <!-- font -->
 <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800,900Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900">
@@ -34,7 +80,7 @@
 <link rel="stylesheet" type="text/css" href="css/shortcodes/shortcodes.css" />
 
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+
 
 <!-- interior-design -->
  
@@ -56,68 +102,55 @@
  
   <div class="wrapper">
 
-<!--=================================
+ <!--=================================
+ preloader 
+ 
+  <div id="pre-loader">
+    <img src="images/pre-loader/loader-12.svg" alt="">
+ </div>
+
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/sclogo3.png" alt="" height="70px" width="150px"/>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link js-scroll-trigger" href="#slides">Home</a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#aboutsection">About</a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gallerysection">Gallery</a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#specialmenusection">Menu</a></li>
+					    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#reservationsection">Reservation</a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contactsection">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+ 
+<div class="wrapper">
+
+ <!--=================================
  preloader -->
  
-<div id="pre-loader">
+  <div id="pre-loader">
     <img src="images/pre-loader/loader-12.svg" alt="">
-</div>
+ </div>
 
-<!--=================================
+ <!--=================================
  preloader -->
 
-<!--=================================
+ <!--=================================
  header -->
 
-<!--
-<header id="header" class="header fancy">
--->
-<header id="header" class="header dark">
 
-<!--=================================
- mega menu -->
-<div class="menu">  
-  <div class="container"> 
-    <div class="row"> 
-     <div class="col-lg-12 col-md-12"> 
-     <!-- menu start -->
-       <nav id="menu" class="mega-menu">
-        <!-- menu list items container -->
-        <section class="menu-list-items">
-        <!-- menu logo -->
-        <ul class="menu-logo">
-            <li>
-                <a href="index.html"><img src="images/sclogo3.png" width="150px" height="80px" alt="logo"> </a>
-            </li>
-        </ul>
-        <!-- menu links -->
-        <div class="menu-bar">
-         <ul class="menu-links">
-            <li class="active"><a href="index.html"  style="font-size: 18px;">Home </a>  </li>
-<!-- <li><a href="#about1" style="font-size: 18px;"> About us  </a> -->  
-				
-				
-			 </li>
-            <li><a href="#p1"  style="font-size: 18px;">Products </a> </li>
-            
-           
-            <li><a href="#contact1"  style="font-size: 18px;"> Contact us </a> </li>
-        </ul>
-			
-        </div>
-       </section>
-       </nav>
-       </div>
-     </div>
-    </div>
-   </div>
-  <!-- menu end -->
-</header>
-
-
-<!--=================================
- header --><!--=================================
- banner -->
 
 <section class="rev-slider o-hidden">
   <div id="rev_slider_261_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="slider-interior-design" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
@@ -333,7 +366,7 @@
 <!--=================================
 CONCEPT --> 
 
-<section class="page-section-ptb" >
+<section class="page-section-ptb">
  <div class="container">
     <div class="row">
       <div class="col-lg-3">
@@ -353,25 +386,8 @@ CONCEPT -->
     </div>
 </section>
 
-<section class="page-title bg-overlay-black-60 parallax" data-jarallax='{"speed": 0.6}' style="background-image: url(images/services5.jpg);">
-  <div class="container">
-    <div class="row"> 
-      <div class="col-lg-12"> 
-        <h1 style="text-align: center;">OUR SERVICES</h1>
-      <div class="page-title-name">
-        
-          
-        </div>
-          <!--<ul class="page-breadcrumb">
-            <li><a href="#"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
-            <li><span>Contact Us</span> </li>-->
-       </ul>
-     </div>
-     </div>
-  </div>
-</section>
 
-<section  id="p1" class="page-section-ptb">
+<section class="page-section-ptb">
  <div class="container">
  <div class="row">
      <div class="col-lg-12 col-md-12 col-sm-12 text-center">
@@ -381,50 +397,6 @@ CONCEPT -->
           </div>
        </div>
        </div>
-       
-       <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4 xs-mb-30">
-          <div class="feature">
-             <div class="feature-image mb-20">
-                <img alt="" src="images/webcover.png" class="img-fluid">
-              </div>
-             <div class="feature-info">
-               <h4 class="text-black"> <a href='website.html'> Website Development </a> </h4>
-                <strong class="theme-color">We have best team of Developers</strong>
-                <p class="mt-15">
-                  We have a team of Website Developers which will give you amazing webites.Web creation can vary from the development of a simple single static plain text website to complex web-based internet applications, electronic companies, and services for social networks.
-                  </p>
-             </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 xs-mb-30">
-          <div class="feature">
-             <div class="feature-image mb-20">
-                <img alt="" src="images/visiting.png" class="img-fluid">
-              </div>
-             <div class="feature-info">
-               <h4 class="text-black"> <a href='digital.html'>Digital Visiting Cards </a> </h4>
-                <strong class="theme-color">Digitalize your Business</strong>
-                <p class="mt-15">It has become important to make a digital visiting card for your company in the new digital era. This allows you to share all your contact information in a convenient way. With a single click, you can simply share all your accounts and contact details on a single site.</p>
-             </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 xs-mb-30">
-          <div class="feature">
-             <div class="feature-image mb-20">
-                <img alt="" src="images/realdisplay.png" class="img-fluid">
-              </div>
-             <div class="feature-info">
-               <h4 class="text-black"> <a href="estate.html"> REAL ESTATE </a> </h4>
-                <strong class="theme-color">Happy to help u</strong>
-                <p class="mt-15">A real estate business is a business entity that deals with the buying, selling, management or investment of real estate properties.</p>
-             </div>
-          </div>
-        </div>
-        
-       
-      </div>
-
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 xs-mb-30">
          <div class="feature">
@@ -464,17 +436,29 @@ CONCEPT -->
        </div>
      </div>
      </div>
- <!--<section class="page-section-ptb">-->
+ </section>
+
+
+
+ <section class="page-section-ptb">
   <div class="container">
+  <div class="row">
+      <!--<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+          <div class="section-title text-center">
+             <h6>We're Good At</h6>
+             <h2> Our services </h2>
+           </div>
+        </div>-->
+        </div>
        <div class="row">
          <div class="col-lg-4 col-md-4 col-sm-4 xs-mb-30">
           <div class="feature">
              <div class="feature-image mb-20">
-                <img alt="" src="images/lifecarecover.png" class="img-fluid">
+                <img alt="" src="images/realdisplay.png" class="img-fluid">
               </div>
              <div class="feature-info">
-               <h4 class="text-black"> <a href="life.html">  LIFE CARE PRODUCTS </a> </h4>
-                <strong class="theme-color">Carry best Products</strong>
+               <h4 class="text-black"> <a href="#"> REAL ESTATE </a> </h4>
+                <strong class="theme-color">Happy to help u</strong>
                 <p class="mt-15">A real estate business is a business entity that deals with the buying, selling, management or investment of real estate properties.</p>
              </div>
           </div>
@@ -485,7 +469,7 @@ CONCEPT -->
                 <img alt="" src="images/kitchen.png" class="img-fluid">
               </div>
              <div class="feature-info">
-               <h4 class="text-black"> <a href="clothing.html"> CLOTHING SUPPLIERS </a> </h4>
+               <h4 class="text-black"> <a href="#"> BUISNESS OF LIFE CARE PRODUCTS </a> </h4>
                 <strong class="theme-color">Happy to Serve you</strong>
                 <p class="mt-15">The outdoor furniture of today is not only stunning, but the designs are innovative and the fabrics are highly durable. More than just porches and patios, outdoor rooms and indoor comforts prevail. Summer Classics provides over 33 furniture ranges in resin wickers, teak, and metal in designs varying from cottage to contemporary.</p>
              </div>
@@ -497,7 +481,7 @@ CONCEPT -->
                 <img alt="" src="images/os3.png" class="img-fluid">
               </div>
              <div class="feature-info">
-               <h4 class="text-black"> <a href="furniture.html"> INDOOR FURNITURE </a> </h4>
+               <h4 class="text-black"> <a href="#"> INDOOR FURNITURE </a> </h4>
                 <strong class="theme-color">INDOOR</strong>
                 <p class="mt-15">For interior designers, furniture matters in the same way as books matter to librarians. It's important because the design of spaces is concerned with interior design, and furniture is what makes those spaces. We'll go through the different facets of this 'creation' in this tutorial.</p>
              </div>
@@ -810,7 +794,7 @@ blog -->
        <div class="row">
          <div class="col-12 mb-40">
         <h2>"Open the door to amazing Interior Architecture &amp; Design."</h2><br><br>
-         <h4 style="text-align:justify">SC Creative today is a benchmark in comfort in many towns across the country over a span of full decade.
+         <h4 style="text-align:justify">Daksha Enterprises pvt. ltd. today is a benchmark in comfort in many towns across the country over a span of full decade.
            <br><br>sharely Owing two excellent craftsmanship, elegent looks and enduring quality that is acclaimed many to -notch architect. The Company, with its insights into public taste and popular trends, couple with a passion for turning out few to restrict design and pattern, back by relentness research and development today caters to a wild range of customers including educational institute, hospital, offices, restaurant, cafeteria & not to mention theater, conferences, dining hall besides an array of exclusive chair for corporate top brass.</h4>
          </div>
        </div>
@@ -983,7 +967,7 @@ blog -->
          </div>
       </div>
     </section>
-    
+    </div>
     <!--=================================
     page-title -->
     
@@ -1012,9 +996,9 @@ blog -->
                             <div class="row">
                                 <div class="col-lg-6">
                                     <address>
-                            <strong> SC Creative</strong>
+                            <strong>DAKSHA ENTERPRISES PVT.LTD.</strong>
                              <br/> 
-                            Vidya Vihar Colony , Lane No. 3 DP Road , Malwadi , Hadapsar , Pune -411028 , MAHARASHTRA.
+                            132,POORNIMA TOWERS, NEAR L.P.G. GAS PETROL PUMP, 397, SHANKARSHETH ROAD, Pune-411037, MAHARASHTRA.
     
      <br>
                              
@@ -1027,12 +1011,12 @@ blog -->
     
                                 <div class="col-lg-6">
                                     <address>
-                                      <strong>Mr. Sachin Chobe</strong><br>
-                                      <abbr title="Mobile">Mobile: </abbr> +(91) 8446960630
+                                      <strong>Mrs. Daksha Jain</strong><br>
+                                      <abbr title="Mobile">Mobile: </abbr> +(91) 8390088996
                                       <br>
-                                      <abbr title="Phone">Phone: </abbr>+(91)7219374836 
+                                      <abbr title="Phone">Phone: </abbr>+(91)9422316684 ( Mr. Harshnayan Jain ) 
                                       <br>
-                                      <abbr title="Email">Email: </abbr>sccreative84@gmail.com
+                                      <abbr title="Email">Email: </abbr>dakshaenterprises5@gmail.com
     
     
                                      </address>
@@ -1047,12 +1031,8 @@ blog -->
             </section>
                             <!-- Google map sensor -->
     
+                            <div class="mapouter"><div class="gmap_canvas" ><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=132,poornima%20towers,397%20shankar%20shet&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:100% ;}</style><a href="https://www.embedgooglemap.net">google map website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div></div>
     
-
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30257.267202529412!2d73.89997626433481!3d18.566896142430995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c146e61484b5%3A0xb6482cf7a8b4b3b0!2sViman%20Nagar%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1614331844180!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-
-
                             <!-- Google map sensor -->
     
                        
@@ -1062,97 +1042,118 @@ blog -->
    </div>
    <!--Contact section  ends here-->
  
-<footer class="footer footer-one-page page-section-pt black-bg">
- <div class="container">
-  <div class="row text-center">
-   <div class="col-lg-4 col-md-4">
-      <div class="contact-add mb-30"> 
-       <div class="text-center">
-           <i class="ti-map-alt text-white"></i>
-           <h5 class="mt-15">Address</h5>
-           <p>SC Creative <br>
-             Vidya Vihar Colony , Lane No.3 DP Road , Malwadi , Hadapsar , Pune-411028 , MAHARASHTRA.</p>
-          </div>
-      </div>
-   </div>
-   <div class="col-lg-4 col-md-4">
-      <div class="contact-add mb-30"> 
-       <div class="text-center">
-         <i class="ti-mobile text-white"></i>
-         <h5 class="mt-15">Call Us</h5>
-         
-			Mobile: +(91) 7219374836 ( Mr. Sachin Chobe )<br>+(91) 8446960630 
-			 
-			 
-			 </p>
-        </div>
-      </div>
-   </div>
-   <div class="col-lg-4 col-md-4">
-      <div class="contact-add mb-30"> 
-        <div class="text-center">
-         <i class="ti-email text-white"></i>
-         <h5 class="mt-15">Email Us</h5>
-         <p> sccreative84@gmail.com</p>
-       </div>
-      </div>
-	  </div>
-   </div>
-	 
-    <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6">
-       <div class="footer-Newsletter text-center mt-30 mb-40">
-        <!--<div id="mc_embed_signup_scroll">
-          <form action="php/mailchimp-action.php" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
-           <div id="msg"> </div>                 
-            <div id="mc_embed_signup_scroll_2">
-              <input id="mce-EMAIL" class="form-control" type="text" placeholder="Email address" name="email1" value="">
-            </div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <!--<div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input type="text" name="b_b7ef45306f8b17781aa5ae58a_6b09f39a55" tabindex="-1" value="">
-              </div>
-              <div class="clear">
-                <button type="submit" name="submitbtn" id="mc-embedded-subscribe" class="button button-border mt-20 form-button">  Get notified </button>
-              </div>
-            </form>-->
-          </div>
-        </div>
-     </div>
-   
-   <div class="footer-widget mt-20">
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-       <p class="mt-15"> &copy;Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#"> Radiant IT Services Pvt. Ltd. </a> All Rights Reserved </p>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="social-icons color-hover float-right">
-         <ul> 
-          <li class="social-facebook"><a href="https://www.facebook.com/daksha.jain.3591"><i class="fa fa-facebook"></i></a></li>
-          <li class="social-instagram"><a href="https://www.instagram.com/invites/contact/?i=1v3sa0gfam7ad&utm_content=hyzz8mz"><i class="fa fa-instagram"></i></a></li>
-          
-         </ul>
-       </div>
-      </div>
-    </div>    
-  </div>
-  </div>
-</footer>
-
-<!--=================================
- footer -->
-
+	
+	<!-- Start Contact info -->
+	<div class="contact-imfo-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Phone</h4>
+						<p class="lead">
+							+91 7020593961
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 ">
+					<i class="fa fa-envelope"></i>
+					<div class="overflow-hidden">
+						<h4>Email</h4>
+						<p class="lead">
+						thecelebration3@gmail.com
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-map-marker"></i>
+					<div class="overflow-hidden">
+						<h4>Location</h4>
+						<p class="lead">
+							City-Vista Kharadi,pune 
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact info -->
+	
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About Us</h3>
+					<p>The Celebration Restuarant has been successfully owned and operated From 2020 and invites you in our fun and friendly atmosphere to drop by and join the locals. </p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Order Now</h3>
+					<div class="subscribe_form">
+						<a class="button" style="color: azure;"   href="tel:+917020593961"><img src="images1/contact.png "; style="width:40px"; "height:40px";>Contact Now</a>
+					</div>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="https://www.facebook.com/The-Celebration-Family-Restro-Bar-101797511859959"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com/thecelebrationrestrobar/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					<p class="lead">"A"-Building Ground Floor City Vista Tower,Kharadi,Pune  </p>
+					<p class="lead"><a href="#">+91 7020593961</a></p>
+					<p><a href="#"> thecelebration3@gmail.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Opening hours</h3>
+					
+					<p><span class="text-color">Monday-Sunday :</span> 9:00 AM-11:00 PM</p>
+				
+				</div>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="company-name">All Rights Reserved. &copy; 2020 <a href="#">The  Celebration Restro & Bar</a> 
+					<a href="https://html.design/"></a>Designed By:Radiant It Services Pvt.Ltd.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="" aria-hidden="true"></i> <img src="images/qrcode.jpeg" height="100px" width="100px"></a>
 </div>
 
-  
+	<!-- ALL JS FILES -->
+	<script src="js1/jquery-3.2.1.min.js"></script>
+	<script src="js1/popper.min.js"></script>
+	<script src="js1/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="js1/jquery.superslides.min.js"></script>
+	<script src="js1/images-loded.min.js"></script>
+	<script src="js1/isotope.min.js"></script>
+	<script src="js1/baguetteBox.min.js"></script>
+	<script src="js1/form-validator.min.js"></script>
+    <script src="js1/contact-form-script.js"></script>
+    <script src="js1/custom.js"></script>
+    
+    <script type="text/javascript">
+	$('.js-scroll-trigger').click(function()
+	{
+		$('.navbar-collapse').collapse('hide');
+	});
+	</script>
 
-<div id="back-to-top"><a class="top arrow" href="#top"><img src="images/qr.jpeg"  height="60px" width="60px" alt=""> <span></span></a></div>
- 
-<!--=================================
- jquery -->
+
+
 
 <!-- jquery -->
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -1183,7 +1184,5 @@ blog -->
 <!-- custom -->
 <script src="js/custom.js"></script>
 </body>
-</html><!--=================================
- footer -->
- 
+</html>
 
